@@ -32,9 +32,10 @@ def s3wrap():
     exist, it is assumed to be an output, and s3wrap uploads the 
     tempfile back to S3 after the command is complete.
     """
-    
+
     # Get command line args
     args = sys.argv[1:]
+    print(' '.join(args))
 
     # Swap S3 paths in arguments with local paths
     # If the S3 path exists, it's an input, download first.
